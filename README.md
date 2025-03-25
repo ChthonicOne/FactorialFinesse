@@ -4,7 +4,7 @@ Just a fun mental game to optimize finding solutions to m-n/2=o! problems which 
 Optimized by observing that the upper number approaches 2*n! of the factorial quickly as n approaches infinity, but never exceeds it.
 Both numbers are also always even, so no need to use floating point imprecision.
 The process goes as follows, starting at n=4
-Set 2*n! as our upper value and `2(n! - n)` as our lower value and then check if `2*n! - 2(n! - n)/2 = (((2*n! - 2*(n! - n)))/2)! = n!`
+Set u=2*n! as our upper value and l=u/2 - n as our lower value and then check if u - l = n!
 If this proves true then print out the value and move to n+1,
 otherwise, subtract 2 from the uppervalue, recalculate the lower and continue until we find it.
 
